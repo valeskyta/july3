@@ -9,7 +9,10 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   # GET /posts/1.json
+
   def show
+    @comment = @post.comments.build
+    @last_comments = @post.comments.last(5)#se agrega para podeer llamar a los comentarios desde las vistas
   end
 
   # GET /posts/new
@@ -72,3 +75,5 @@ class PostsController < ApplicationController
       params.require(:post).permit(:title, :content)
     end
 end
+
+
