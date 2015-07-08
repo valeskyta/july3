@@ -2,6 +2,9 @@ role :app, %w{deploy@104.236.67.13}
 role :web, %w{deploy@104.236.67.13}
 role :db,  %w{deploy@104.236.67.13}
 
+server '104.236.67.13', user: 'deploy', roles: %w{web app}, my_property: :my_value
+set :stage, :production
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
