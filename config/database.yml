@@ -25,7 +25,7 @@ development:
   <<: *default
   adapter: postgresql
   encoding: unicode
-  database: July3_development
+  database: july3_development
   pool: 5
   username: spring
   password: spring
