@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  oreder_id: MyString
+  session_id: MyString
+  product_id: 
+  transaction_id: MyString
+  amount: 1
+  authorization: MyString
+  card_last_number: 1
+  status: false
+
+two:
+  oreder_id: MyString
+  session_id: MyString
+  product_id: 
+  transaction_id: MyString
+  amount: 1
+  authorization: MyString
+  card_last_number: 1
+  status: false

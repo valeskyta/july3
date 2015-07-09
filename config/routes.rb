@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get "/products/pay"
+  resources :products
+
+  resources :products
   devise_for :users
   get 'comments/create'
 
