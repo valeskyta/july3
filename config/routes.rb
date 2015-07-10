@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post '/products/confirmation'
   get "/products/pay"
   resources :products
 
