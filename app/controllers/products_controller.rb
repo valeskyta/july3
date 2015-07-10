@@ -17,6 +17,7 @@ class ProductsController < ApplicationController
     @payment.session_id = SecureRandom.random_number(10)
     @payment.amount = @product.precio
     @payment.status = false
+    @payment.product = @product
     @payment.save
 
     @tbk_url_cgi = "http://186.64.122.15/cgi-bin/valeskyta/tbk_bp_pago.cgi"
