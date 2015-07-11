@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  skip_before_filter :verify_authenticity_token, only: [:confirmation]
+  skip_before_filter :verify_authenticity_token, only: [:confirmation, :failure, :success]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
 
