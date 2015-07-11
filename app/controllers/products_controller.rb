@@ -29,7 +29,7 @@ class ProductsController < ApplicationController
   end
 
   def confirmation
-    payment = Payment.where(order_id: params[:TBK_ORDEN_COMPRA]).where(session_id: params[:TBK_ID_SESION]).first
+    payment = Payment.where(oreder_id: params[:TBK_ORDEN_COMPRA]).where(session_id: params[:TBK_ID_SESION]).first
     rejected = false
     rejected = true if payment.nil?
     rejected = true if payment.amount.to_s + "00" != params[:TBK_MONTO]
@@ -50,6 +50,17 @@ class ProductsController < ApplicationController
     end
     payment.save
   end
+
+  def success
+    @payment = Payment.where(oreder_id: params[:TBK_ORDEN_COMPRA]).where(session_id: params[:TBK_ID_SESION]).first
+     #@payment.card_last_numbers = params[:TBK_FINAL_NUMERO_TARJETA]
+
+  end
+
+  def failure
+
+  end
+
 
   # def confirmation
   #   logger.info "hola me estoy llamando"

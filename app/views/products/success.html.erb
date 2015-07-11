@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<h1>Datos de tu pago</h1>
+	<p><span>Nombre compra</span><%= [@product, @payment] %></p>
+	<p><span>URL Comercio</span></p>
+	<p><span>ID Transacción</span></p>
+	<p><span>Número de orden</span></p>
+	<p><span>Tipo de transacción</span></p>
+	<p><span>Tipo de Pago</span></p>
+	<p><span>Código Autorización</span></p>
+	<p><span>Número de cuotas</span></p>
+	<p><span>Tipo Cuotas</span></p>
+	<p><span>Monto Transacción</span></p>
+	<p><span>Fecha Transacción</span></p>
+	<p><span>Nombre Comercio</span></p>
+	<p><span>Tarjeta terminada en</span> <%= @payment.to_json%></p>
+
+</body>
+</html>
