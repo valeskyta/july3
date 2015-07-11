@@ -22,8 +22,8 @@ class ProductsController < ApplicationController
 
     @tbk_url_cgi = "http://186.64.122.15/cgi-bin/valeskyta/tbk_bp_pago.cgi"
     @tbk_tipo_transaccion = "TR_NORMAL"
-    @tbk_url_exito = "http://http://valeska.beerly.cl/products/success"
-    @tbk_url_fracaso = "http://http://valeska.beerly.cl/products/failure"
+    @tbk_url_exito = "http://valeska.beerly.cl/products/success"
+    @tbk_url_fracaso = "http://valeska.beerly.cl/products/failure"
 
 
   end
@@ -53,7 +53,6 @@ class ProductsController < ApplicationController
 
   def success
     @payment = Payment.where(oreder_id: params[:TBK_ORDEN_COMPRA]).where(session_id: params[:TBK_ID_SESION]).first
-     #@payment.card_last_numbers = params[:TBK_FINAL_NUMERO_TARJETA]
 
   end
 
